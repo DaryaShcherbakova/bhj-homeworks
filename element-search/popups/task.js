@@ -10,7 +10,7 @@ for (let i = 0; i < modalClose.length; i++) {
     }
   }
 }
-showSuccess[0].onclick = function () {
+  showSuccess[0].onclick = function () {
   modalMain[0].classList.remove("modal_active");
   modalMain[1].classList.add("modal_active");
 }
