@@ -2,7 +2,7 @@
 
 (() => {
 const activeClassName = "slider__item_active";
-const items = [...document.querySelectorAll (".slider___item")]
+const items = [...document.querySelectorAll (".slider__item")];
 const slidesCount = items.length;
 
 let currentIndex = items.findIndex (
@@ -14,7 +14,7 @@ let currentIndex = items.findIndex (
     const current = items [index];
    
 
-    prev.classlist.remove(activeClassName);
+    prev.classList.remove(activeClassName);
     current.classList.add(activeClassName);
 
     currentIndex = index;
@@ -37,5 +37,7 @@ setCurrentSlide (
         const isNext = target.classList.contains("slider__arrow_next");
         if (isNext) {
             return showNextSlide();
-        })
+        }})
+
     })();
+
