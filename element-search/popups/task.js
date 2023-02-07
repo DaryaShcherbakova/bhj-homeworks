@@ -10,8 +10,10 @@ for (let i = 0; i < modalClose.length; i++) {
     }
   }
 }
-  showSuccess[0].onclick = function () {
-  modalMain[0].classList.remove("modal_active");
-  modalMain[1].classList.add("modal_active");
-}
+  showSuccess[i].onclick = function () {
+  // modalMain[0].classList.remove("modal_active");
+  // modalMain[1].classList.add("modal_active");
+        modalSuccess.className = "modal modal_active";
+        modalMain.className = "modal";
 
+  }
