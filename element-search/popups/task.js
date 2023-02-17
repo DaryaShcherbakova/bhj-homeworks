@@ -1,19 +1,23 @@
-let modalMain = Array.from(document.getElementsByClassName("modal"));
-let modalClose = Array.from(document.querySelectorAll(".modal__close"));
-let showSuccess = Array.from(document.getElementsByClassName("modal_success"));
+const modalMain = document.getElementById ("modal_main");
+modalMain.className = "modal modal_active";
 
-modalMain[0].classList.add("modal_active");
-for (let i = 0; i < modalClose.length; i++) {
-  modalClose[i].onclick = function () {
-    if (modalClose[i].closest(".modal_active")) {
-      modalClose[i].closest(".modal_active").classList.remove("modal_active");
-    }
-  }
-}
-  showSuccess[i].onclick = function () {
-  // modalMain[0].classList.remove("modal_active");
-  // modalMain[1].classList.add("modal_active");
+const modalSuccess = document.getElementById("modal_success");
+const showSuccess = document.getElementsByClassName("show-success");
+let arrSuccess = Array.from (showSuccess);
+
+for (let i = 0; i < arrSuccess.length; i++) {
+    showSuccess[i].onclick = function() {
         modalSuccess.className = "modal modal_active";
         modalMain.className = "modal";
+    }
+}
 
-  }
+const modalClose = document.querySelectorAll(".modal__close");
+let arrClose = Array.from(modalClose);
+
+for (let i = 0; i < arrClose.length; i++) {
+    arrClose[i].onclick = function() {
+        modalMain.className = "modal";
+        modalSuccess.className = "modal";
+    }
+}
