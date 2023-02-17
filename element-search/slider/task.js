@@ -37,7 +37,11 @@ setCurrentSlide (
         const isNext = target.classList.contains("slider__arrow_next");
         if (isNext) {
             return showNextSlide();
-        }})
+        }
+         const isPrev = target.classList.contains("slider__arrow_prev");
+         if (isPrev) {
+             return showPrevSlide();
+         } })
 
     })();
 
